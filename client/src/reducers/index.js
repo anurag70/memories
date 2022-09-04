@@ -1,5 +1,8 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
-import posts from './posts';
+//here importing reducer from posts.js
 
+import posts from "./posts";
+
+//this reducer is used in the main parent index.js file
 export const reducers = combineReducers({ posts });
