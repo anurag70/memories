@@ -54,7 +54,9 @@ export const createPost = async (req, res) => {
 };
 
 export const updatePost = async (req, res) => {
+  //extracting the id from the url
   const { id } = req.params;
+  //this is sending the data from the client
   const { title, message, creator, selectedFile, tags } = req.body;
 
   if (!mongoose.Types.ObjectId.isValid(id))

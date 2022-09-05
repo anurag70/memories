@@ -49,7 +49,7 @@ export const likePost = (id) => async (dispatch) => {
 
     dispatch({ type: "LIKE", payload: data });
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
   }
 };
 
@@ -59,6 +59,6 @@ export const deletePost = (id) => async (dispatch) => {
 
     dispatch({ type: "DELETE", payload: id });
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
   }
 };

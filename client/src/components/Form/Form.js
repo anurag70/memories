@@ -14,16 +14,17 @@ const Form = ({ currentId, setCurrentId }) => {
     tags: "",
     selectedFile: "",
   });
+  //for the updated post
   const post = useSelector((state) =>
     currentId ? state.posts.find((message) => message._id === currentId) : null
   );
   const dispatch = useDispatch();
   const classes = useStyles();
-
+  //when we update anything then it will be reflected in the form
   useEffect(() => {
     if (post) setPostData(post);
   }, [post]);
-
+  //after updating the form must be empty
   const clear = () => {
     setCurrentId(0);
     setPostData({
